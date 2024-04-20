@@ -1,0 +1,27 @@
+@import "../../shared/variable.scss";
+
+.home {
+	&--wrapper {
+		padding-top: 76px;
+		box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	}
+
+	&--video {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 24px;
+	}
+
+	&--info {
+		min-height: 300px;
+		background-color: $primary-medium;
+		padding: 24px;
+		h2 {
+			font-size: 40px;
+			text-align: center;
+			color: white;
+			text-transform: uppercase;
+		}
+	}
+}

@@ -1,0 +1,77 @@
+<header id="header">
+	<nav class="navbar navbar-expand-lg">
+		<div class="container-fluid">
+			<a class="navbar-brand" color="primary" href="#"
+				><i class="bx bx-code-alt"></i>create-tour</a
+			>
+			<ul class="navbar-menu">
+				<li
+					class="menu--item"
+					(click)="swithRoute(0)"
+					[class.tab-active]="0 == activeIndex">
+					Trang chủ
+				</li>
+
+				<li
+					class="menu--item"
+					[routerLink]="['/pages/create']"
+					(click)="swithRoute(1)"
+					[class.tab-active]="1 == activeIndex">
+					Tạo giải đấu
+				</li>
+				<li
+					class="menu--item"
+					[routerLink]="['/pages/find']"
+					(click)="swithRoute(2)"
+					[class.tab-active]="2 == activeIndex">
+					Tìm giải đấu
+				</li>
+			</ul>
+			<div class="navbar-auth" *ngIf="!isLogin">
+				<a href="/auth/login" class="btn">Đăng nhập</a>
+				<a href="/auth/register" class="btn">Đăng ký</a>
+			</div>
+			<div class="navbar-user" *ngIf="isLogin">
+				<div class="header--user" (click)="toggleUserMenu()">
+					<i class="bx bxs-user"></i>
+					<span class="user-name">Hi {{ username }}</span>
+					<i class="bx bx-chevron-left" *ngIf="!isUserMenu"></i>
+					<i class="bx bx-chevron-down" *ngIf="isUserMenu"></i>
+				</div>
+				<ul class="user-dropdown" *ngIf="isUserMenu">
+					<li class="dropdown--item" (click)="detailUser()">
+						Thông tin tài khoản
+					</li>
+					<li class="dropdown--item">Giải đấu của tôi</li>
+					<li class="dropdown--item" (click)="logOut()">Đăng xuất</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<nav class="menu--mobile">
+		<i class="bx bx-menu" (click)="toggleMenuMobile()"></i>
+	</nav>
+	<ul class="navbar-menu-mobile" *ngIf="isHideMenuMobile">
+		<li
+			class="menu--item"
+			color="primary"
+			(click)="swithRoute(0)"
+			[class.tab-active]="0 == activeIndex">
+			Trang chủ
+		</li>
+		<li
+			class="menu--item"
+			color="primary"
+			(click)="swithRoute(1)"
+			[class.tab-active]="1 == activeIndex">
+			Tạo giải đấu
+		</li>
+		<li
+			class="menu--item"
+			color="primary"
+			(click)="swithRoute(2)"
+			[class.tab-active]="2 == activeIndex">
+			Tìm giải đấu
+		</li>
+	</ul>
+</header>

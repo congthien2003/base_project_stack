@@ -1,0 +1,52 @@
+<div class="auth--wrapper">
+	<div class="register">
+		<h4 class="text-center">Đăng ký</h4>
+		<form #form="ngForm">
+			<div class="form-group">
+				<!-- username input -->
+				<div class="form-outline mb-4">
+					<label class="form-label" for="userName">Username</label>
+					<input
+						[(ngModel)]="user.username"
+						name="userName"
+						type="text"
+						id="userName"
+						class="form-control" />
+				</div>
+				<!-- Email input -->
+				<div class="form-outline mb-4">
+					<label class="form-label" for="email">Email</label>
+					<input
+						[(ngModel)]="user.email"
+						name="email"
+						type="email"
+						id="email"
+						class="form-control" />
+				</div>
+
+				<!-- Password input -->
+				<div class="form-outline mb-4">
+					<label class="form-label" for="password">Mật khẩu</label>
+					<input
+						[(ngModel)]="user.password"
+						name="password"
+						type="password"
+						id="password"
+						class="form-control" />
+				</div>
+
+				<!-- Submit button -->
+				<a
+					type="submit"
+					class="btn mb-4 w-100 btn-auth"
+					(click)="regiser()">
+					Đăng ký
+				</a>
+				<!-- Register buttons -->
+				<div class="text-center">
+					<p>Đã có tài khoản ? <a href="/auth/login">Đăng nhập</a></p>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

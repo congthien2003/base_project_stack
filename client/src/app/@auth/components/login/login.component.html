@@ -1,0 +1,86 @@
+<div class="auth--wrapper">
+	<div class="login">
+		<h4 class="text-center">Đăng nhập</h4>
+		<form #form="ngForm">
+			<div class="form-group">
+				<!-- Email input -->
+				<div class="form-outline mb-4">
+					<label class="form-label" for="email">Email</label>
+					<input
+						[(ngModel)]="user.email"
+						name="email"
+						type="email"
+						id="email"
+						class="form-control" />
+				</div>
+
+				<!-- Password input -->
+				<div class="form-outline mb-4">
+					<label class="form-label" for="password">Mật khẩu</label>
+					<input
+						[(ngModel)]="user.password"
+						name="password"
+						type="password"
+						id="password"
+						class="form-control" />
+				</div>
+
+				<!-- 2 column grid layout for inline styling -->
+				<div class="row mb-4">
+					<div class="col d-flex justify-content-center">
+						<!-- Checkbox -->
+						<div class="form-check">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								value=""
+								id="form2Example31"
+								checked />
+							<label
+								class="form-check-label"
+								for="form2Example31">
+								Ghi nhớ lần đăng nhập
+							</label>
+						</div>
+					</div>
+
+					<div class="col d-flex justify-content-center">
+						<!-- Simple link -->
+						<a href="/auth/restore-password">Quên mật khẩu?</a>
+					</div>
+				</div>
+
+				<!-- Submit button -->
+				<a
+					type="submit"
+					class="btn mb-4 w-100 btn-auth"
+					(click)="login()">
+					Đăng nhập
+				</a>
+				<!-- Register buttons -->
+				<div class="text-center">
+					<p>
+						Chưa có tài khoản ? <a href="/auth/register">Đăng ký</a>
+					</p>
+				</div>
+
+				<!-- <p>or sign up with:</p> -->
+				<!-- <button type="button" class="btn btn-link btn-floating mx-1">
+					<i class="fab fa-facebook-f"></i>
+				</button>
+
+				<button type="button" class="btn btn-link btn-floating mx-1">
+					<i class="fab fa-google"></i>
+				</button>
+
+				<button type="button" class="btn btn-link btn-floating mx-1">
+					<i class="fab fa-twitter"></i>
+				</button>
+
+				<button type="button" class="btn btn-link btn-floating mx-1">
+					<i class="fab fa-github"></i>
+				</button> -->
+			</div>
+		</form>
+	</div>
+</div>

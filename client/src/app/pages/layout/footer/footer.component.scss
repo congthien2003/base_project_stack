@@ -1,0 +1,15 @@
+$primary-dark: #5722ea;
+$primary: #7c4dff;
+$primary-medium: #5e2fdf;
+$primary-light: #9873fd;
+$primary-ultra-light: #bea6ff;
+$primary-active: #14b8e1;
+
+.social-media {
+	i {
+		transition: 0.1s ease-in-out;
+	}
+	i:hover {
+		color: $primary-dark;
+	}
+}

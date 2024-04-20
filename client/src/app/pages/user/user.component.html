@@ -1,0 +1,42 @@
+<app-header></app-header>
+
+<div class="user--wrapper">
+	<div class="user--form">
+		<h4 class="form--header">Chỉnh sửa thông tin người dùng</h4>
+		<form class="container" [formGroup]="userForm">
+			<input type="hidden" formControlName="id" ngModel />
+			<div class="form-group mt-4">
+				<label for="userName">Tên người dùng</label>
+				<input
+					ngModel
+					id="userName"
+					formControlName="userName"
+					class="form-control mt-1"
+					placeholder="" />
+			</div>
+			<div class="form-group mt-2">
+				<label for="email">Email</label>
+				<input
+					ngModel
+					id="email"
+					formControlName="email"
+					class="form-control mt-1"
+					placeholder="abc@gmail.com"
+					[disabled]="1 !== 1" />
+			</div>
+			<div class="form-group mt-2">
+				<label for="Phones">Số điện thoại</label>
+				<input
+					ngModel
+					id="Phones"
+					formControlName="Phones"
+					class="form-control mt-1"
+					placeholder="+84" />
+			</div>
+			<button type="button" class="btn btn-custom mt-4" (click)="save()">
+				Cập nhật
+			</button>
+			<a class="btn mt-2 btn-secondary w-100" href="/pages">Trở về</a>
+		</form>
+	</div>
+</div>

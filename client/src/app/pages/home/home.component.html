@@ -1,0 +1,32 @@
+<app-header></app-header>
+
+<div class="home--wrapper container">
+	<div class="home--video">
+		<iframe
+			width="763"
+			height="430"
+			src="https://www.youtube.com/embed/spNOT-7HyM4"
+			title="Score7 - Tournament Generator - Tutorial"
+			frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+			referrerpolicy="strict-origin-when-cross-origin"
+			allowfullscreen></iframe>
+	</div>
+
+	<div class="home--info">
+		<h2>Giới thiệu</h2>
+		<div class="list--card">
+			<div class="row">
+				<div
+					class="col-lg-4 col-md-6 col-sm-12 mt-4"
+					*ngFor="let item of ListCardInfo">
+					<app-card-info
+						[title]="item.title"
+						[content]="item.content"
+						[classIcon]="item.classIcon"></app-card-info>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<app-footer></app-footer>
