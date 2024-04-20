@@ -1,4 +1,4 @@
-<h1>Stack Project Angular 16.0 + .NET 6.0</h1>
+<h1 style="text-align: center;">Stack Project Angular 16.0 + .NET 6.0</h1>
 
 <h2>Technical: </h2>
 <ul>
@@ -22,10 +22,4 @@
 </ul>
 
 <strong>Author: @CongThien</strong>
-
-<style>
-    h1 {
-        text-align: center;
-    }
-
-</style>
+<p>Thanks for watching</p>
